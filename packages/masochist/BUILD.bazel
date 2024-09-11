@@ -1,0 +1,13 @@
+load("@rules_java//java:defs.bzl", "java_binary")
+
+java_binary(
+    name = "start",
+    main_class = "HelloWorld",
+    srcs = ["HelloWorld.java"],
+)
+
+java_test(
+    name = "test",
+    srcs = glob(["*.java"]),
+    test_class = "HelloWorldTest",
+)

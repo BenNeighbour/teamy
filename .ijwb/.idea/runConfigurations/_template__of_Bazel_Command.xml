@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" focusToolWindowBeforeRun="true" singleton="false">
+    <blaze-settings handler-id="BlazeCommandGenericRunConfigurationHandlerProvider" blaze-command="run">
+      <blaze-target>//packages/...</blaze-target>
+      <blaze-user-flag>--ui_event_filters=-stdout,-stderr</blaze-user-flag>
+      <blaze-user-flag>--noshow_progress</blaze-user-flag>
+      <env_state>
+        <envs />
+      </env_state>
+    </blaze-settings>
+    <method v="2">
+      <option name="Blaze.BeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

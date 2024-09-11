@@ -1,0 +1,29 @@
+load("@rules_java//java:defs.bzl", "java_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+
+java_proto_library(
+    name = "person_java_proto",
+    deps = [":person_proto"],
+)
+
+proto_library(
+    name = "person_proto",
+    srcs = ["person.proto"],
+    deps = [
+        ":address_proto",
+        "@com_google_protobuf//:any_proto",
+        # TODO - ADD GRPC VALIDATE STUFF HERE
+    ],
+)
+
+proto_library(
+    name = "address_proto",
+    srcs = ["address.proto"],
+    deps = [":zip_code_proto"],
+)
+
+proto_library(
+    name = "zip_code_proto",
+    srcs = ["zip_code.proto"],
+)
