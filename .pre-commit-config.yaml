@@ -8,10 +8,10 @@ default_stages: [commit]
 repos:
   - repo: local
     hooks:
-      - id: aspect_rules_lint
+      - id: format
         name: Reformat Code
         language: system
-        entry: bazel run //:format --ui_event_filters=-stdout,-stderr
+        entry: bazel run //:format --ui_event_filters=-info,-stdout,-stderr --noshow_progress
         files: .*
   - repo: https://github.com/crate-ci/typos
     rev: v1.23.2
