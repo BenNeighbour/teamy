@@ -5,8 +5,12 @@ import logging
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%Y/%m/%d %H:%M:%S"
 )
+
+
 def log_with_timestamp(message):
     logging.info(message)
+
+
 def start_server():
     host = "localhost"
     port = 8083
@@ -22,5 +26,7 @@ def start_server():
 
                 response = b"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\nPython:sdf Helsdafdsflo World sdfjdsafjdska sadfsdfjkl!"
                 client_socket.sendall(response)
+
+
 if __name__ == "__main__":
     start_server()

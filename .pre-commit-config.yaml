@@ -5,34 +5,16 @@
 # Commitizen runs in commit-msg stage
 # but we don't want to run the other hooks on commit messages
 default_stages: [commit]
-
-# Use a slightly older version of node by default
-# as the default uses a very new version of GLIBC
-default_language_version:
-  node: 16.18.0
-
 repos:
-  # Check formatting and lint for starlark code
-  - repo: https://github.com/keith/pre-commit-buildifier
-    rev: 7.3.1
-    hooks:
-      - id: buildifier
-      - id: buildifier-lint
-  # Enforce that commit messages allow for later changelog generation
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.18.0
-    hooks:
-      # Requires that commitizen is already installed
-      - id: commitizen
-        stages: [commit-msg]
-  - repo: local
-    hooks:
-      - id: aspect_rules_lint
-        name: Format
-        language: system
-        entry: bazel run //:format
-        files: .*
   - repo: https://github.com/crate-ci/typos
     rev: v1.23.2
     hooks:
       - id: typos
+        name: Check for Typos
+  - repo: local
+    hooks:
+      - id: aspect_rules_lint
+        name: Format Code
+        language: system
+        entry: bazel run //:format
+        files: .*
