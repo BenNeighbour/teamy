@@ -7,8 +7,8 @@ logging.basicConfig(
 )
 
 
-def log_with_timestamp(message):
-    logging.info(message)
+def log_with_timestamp(messagee):
+    logging.info(messagee)
 
 
 def start_server():
