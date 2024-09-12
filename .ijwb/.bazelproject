@@ -19,11 +19,10 @@ derive_targets_from_directories: true
 directories:
   packages/authentication
   packages/gopher
-  packages/goth
   packages/masochist
   packages/web-ui
-  packages/proto
   packages/pythonista
+  packages/typey
 additional_languages:
   javascript
   go

@@ -5,5 +5,4 @@ deno_binary(
     allow = ["write", "net"],
     main = "main.ts",
     unstable_apis = True,
-    deps = [],
 )
