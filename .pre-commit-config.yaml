@@ -6,15 +6,15 @@
 # but we don't want to run the other hooks on commit messages
 default_stages: [commit]
 repos:
-  - repo: https://github.com/crate-ci/typos
-    rev: v1.23.2
-    hooks:
-      - id: typos
-        name: Check for Typos
   - repo: local
     hooks:
       - id: aspect_rules_lint
         name: Reformat Code
         language: system
-        entry: bazel run //:format
+        entry: bazel run //:format --ui_event_filters=-stdout,-stderr
         files: .*
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.23.2
+    hooks:
+      - id: typos
+        name: Check for Typos
