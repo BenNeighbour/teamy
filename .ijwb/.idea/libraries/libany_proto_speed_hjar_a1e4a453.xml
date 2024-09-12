@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libany_proto-speed-hjar_a1e4a453">
-    <CLASSES>
-      <root url="jar:///private/var/tmp/_bazel_dev/ceaa9348c036c1922efd679112359ae3/execroot/_main/bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/libany_proto-speed-hjar.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -1,0 +1,9 @@
+load("@aspect_rules_deno//deno:defs.bzl", "deno_binary")
+
+deno_binary(
+    name = "start",
+    allow = ["write", "net"],
+    main = "main.ts",
+    unstable_apis = True,
+    deps = [],
+)
