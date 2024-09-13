@@ -1,7 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="typey" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" focusToolWindowBeforeRun="true" singleton="false">
     <blaze-settings handler-id="BlazeCommandGenericRunConfigurationHandlerProvider" blaze-command="run">
-      <blaze-target>//packages/typey:start</blaze-target>
       <blaze-user-flag>--ui_event_filters=-stdout,-stderr</blaze-user-flag>
       <blaze-user-flag>--noshow_progress</blaze-user-flag>
       <env_state>

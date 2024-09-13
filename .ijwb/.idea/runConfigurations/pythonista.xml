@@ -1,7 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="pythonista" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" focusToolWindowBeforeRun="true" singleton="false">
-    <blaze-settings handler-id="BlazePyRunConfigurationHandlerProvider" blaze-command="run" kind="py_binary">
-      <blaze-target>//packages/pythonista:start</blaze-target>
+    <blaze-settings handler-id="BlazeCommandGenericRunConfigurationHandlerProvider" blaze-command="run" kind="py_binary">
       <blaze-user-flag>--ui_event_filters=-stdout,-stderr</blaze-user-flag>
       <blaze-user-flag>--noshow_progress</blaze-user-flag>
       <env_state>

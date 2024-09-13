@@ -21,8 +21,9 @@ directories:
   packages/gopher
   packages/masochist
   packages/web-ui
-  packages/pythonista
+  # packages/pythonista
   packages/typey
+  tools/format
 additional_languages:
   javascript
   go

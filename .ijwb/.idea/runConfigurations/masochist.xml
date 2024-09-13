@@ -1,7 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="masochist" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" focusToolWindowBeforeRun="true" singleton="false">
-    <blaze-settings blaze-command="run" handler-id="BlazeJavaRunConfigurationHandlerProvider" kind="java_binary">
-      <blaze-target>//packages/masochist:start</blaze-target>
+    <blaze-settings blaze-command="run" handler-id="BlazeCommandGenericRunConfigurationHandlerProvider" kind="java_binary">
       <blaze-user-flag>--ui_event_filters=-stdout,-stderr</blaze-user-flag>
       <blaze-user-flag>--noshow_progress</blaze-user-flag>
       <env_state>

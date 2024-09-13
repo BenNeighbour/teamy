@@ -7,8 +7,8 @@ java_library(
 
 java_binary(
     name = "start",
-    main_class = "HelloWorld",
     srcs = ["HelloWorld.java"],
+    main_class = "HelloWorld",
 )
 
 java_test(
