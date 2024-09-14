@@ -25,4 +25,3 @@ jobs:
           IGNORE_GITIGNORED_FILES: true
           VALIDATE_ALL_CODEBASE: true  # Ensure all codebase is validated
           VALIDATE_PYTHON_ISORT: false  # Adjust this if you need isort validation
-          # Additional environment variables for other languages if needed
