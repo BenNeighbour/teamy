@@ -1,0 +1,28 @@
+name: Lint using Super-Linter
+
+on: [pull_request]
+
+jobs:
+  lint:
+    name: Lint using Super-Linter
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      statuses: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Super-Linter
+        uses: super-linter/super-linter@v5.7.2
+        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IGNORE_GENERATED_FILES: true
+          IGNORE_GITIGNORED_FILES: true
+          VALIDATE_ALL_CODEBASE: true  # Ensure all codebase is validated
+          VALIDATE_PYTHON_ISORT: false  # Adjust this if you need isort validation
+          # Additional environment variables for other languages if needed

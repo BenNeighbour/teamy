@@ -1,0 +1,16 @@
+# .super-linter.yml
+linter:
+  # Enable all linters
+  ENABLE: true
+
+  # Specific linters configuration
+  linters:
+    javascript: true
+    python: true
+    go: true
+    rust: true
+    shell: true
+    starlark: true
+    terraform: true
+    yaml: true
+    # Add or remove languages as needed

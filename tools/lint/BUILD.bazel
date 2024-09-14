@@ -13,15 +13,3 @@ alias(
     name = "buf",
     actual = "@rules_buf_toolchains//:buf",
 )
-
-#java_binary(
-#    name = "pmd",
-#    main_class = "net.sourceforge.pmd.PMD",
-#    runtime_deps = ["@net_sourceforge_pmd"],
-#)
-#
-#java_binary(
-#    name = "checkstyle",
-#    main_class = "com.puppycrawl.tools.checkstyle.Main",
-#    runtime_deps = ["@com_puppycrawl_tools_checkstyle//jar"],
-#)

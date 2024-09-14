@@ -1,11 +1,11 @@
 load("@aspect_rules_lint//format:defs.bzl", "format_multirun")
-#load("@npm//:prettier/package_json.bzl", prettier = "bin")
+load("@aspect_rules_format_npm//:prettier/package_json.bzl", prettier = "bin")
 
-#prettier.prettier_binary(
-#    name = "prettier",
-#    env = {"BAZEL_BINDIR": "."},
-#    fixed_args = ["--loglevel=warn"],
-#)
+prettier.prettier_binary(
+    name = "prettier",
+    env = {"BAZEL_BINDIR": "."},
+    fixed_args = ["--loglevel=warn"],
+)
 
 format_multirun(
     name = "format",
@@ -22,7 +22,6 @@ format_multirun(
     shell = "@aspect_rules_lint//format:shfmt",
     starlark = "@buildifier_prebuilt//:buildifier",
     terraform = "@aspect_rules_lint//format:terraform",
-    #    java = "@aspect_rules_lint//format:java",
 
     #    scala = ":scalafmt",
     #    java = ":java-format",
